@@ -41,7 +41,7 @@ export class OpenAIAgent implements AIAgent {
     this.assistant = await this.openai.beta.assistants.create({
       name: "AI Writing Assistant",
       instructions: this.getWritingAssistantPrompt(),
-      model: "gpt-4o",
+      model: "gpt-4o-mini",
       tools: [
         { type: "code_interpreter" },
         {
